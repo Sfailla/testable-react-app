@@ -1,23 +1,25 @@
 import React from 'react';
-import Header from '../Header.js';
+import { ThemeProvider } from 'react-jss';
+import { theme } from '../../styles/theme';
 
-const styles = {
-	content: {
-		marginTop: '5rem',
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center'
-	}
-};
+import HomePage from '../../pages/HomePage';
+import FormPage from '../../pages/FormPage';
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route
+} from 'react-router-dom';
 
 const App = () => {
 	return (
-		<div>
-			<Header />
-			<div style={styles.content}>
-				<code>Remove / Edit Header.jsx file to get started</code>
-			</div>
-		</div>
+		<ThemeProvider theme={theme}>
+			<Router>
+				<Switch>
+					<Route exact path="/" component={HomePage} />
+					<Route exact path="/forms" component={FormPage} />
+				</Switch>
+			</Router>
+		</ThemeProvider>
 	);
 };
 
