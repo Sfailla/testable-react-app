@@ -1,13 +1,5 @@
-# react-boilerplate-client
+# testable-react-app
 
-react boilerplate for client includes: 
-
-`react` `react-router` `sass` `webpack`
+![react-test-img](/src/images/image.png)
 
 ### by Steve Failla
-
-___
-
-## To get started
-- in terminal type *npm install* or *yarn install* to install dependencies
-- type *yarn start* or *npm start* to spin up development server
