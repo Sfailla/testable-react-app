@@ -1,5 +1,6 @@
 # testable-react-app
 
-![react-test-img](/https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTXQRotvK1kFNsVSrFUEKDdXbvDNN3E2EiW0JMHbZQgE3wQGrsF&usqp=CAU/)
+![react-test-img](../master/images/test-react.png)
+![react-test-img](../master/test-react-copy.png)
 
 ### by Steve Failla
