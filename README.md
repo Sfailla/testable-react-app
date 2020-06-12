@@ -1,11 +1,6 @@
 # testable-react-app
 
-![react-test-img](./src/images/test-react.png)
-
-
-
-
-![react-test-img](test-react-copy.png)
+![react-test-img](https://github.com/Sfailla/testable-react-app/blob/master/src/images/test-react.png)
 
 
 ### by Steve Failla
