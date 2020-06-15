@@ -45,6 +45,9 @@ export const theme = {
 			main: '#f50057',
 			dark: '#c51162'
 		},
+		tertiary: {
+			main: 'darkviolet'
+		},
 		text: {
 			primary: 'rbga(0, 0, 0, 0.87)',
 			secondary: 'rgba(0, 0, 0, 0.54)',
