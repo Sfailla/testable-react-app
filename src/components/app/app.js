@@ -4,6 +4,7 @@ import { theme } from '../../styles/theme';
 
 import HomePage from '../../pages/HomePage';
 import FormPage from '../../pages/FormPage';
+import Header from './Header';
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -13,6 +14,7 @@ import {
 const App = () => {
 	return (
 		<ThemeProvider theme={theme}>
+			<Header />
 			<Router>
 				<Switch>
 					<Route exact path="/" component={HomePage} />
