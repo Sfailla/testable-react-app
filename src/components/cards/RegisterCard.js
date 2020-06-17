@@ -21,7 +21,7 @@ const useStyles = createUseStyles(theme => ({
 	}
 }));
 
-function FormCard() {
+function RegisterCard() {
 	const classes = useStyles();
 	return (
 		<div className={classes.card}>
@@ -62,4 +62,4 @@ function FormCard() {
 	);
 }
 
-export default FormCard;
+export default RegisterCard;
