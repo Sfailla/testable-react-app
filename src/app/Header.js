@@ -1,5 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
+import Navigation from '../components/nav/Navigation';
 
 const useStyles = createUseStyles(theme => ({
 	header: {
@@ -37,8 +38,7 @@ function Header() {
 			<div className={classes.wrapper}>
 				<h2>Logo</h2>
 				<div className={classes.navigation}>
-					<p>Home</p>
-					<p>About</p>
+					<Navigation />
 				</div>
 			</div>
 		</header>

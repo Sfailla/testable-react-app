@@ -1,11 +1,22 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 
-import FormCard from '../components/cards/FormCard';
+import RegisterCard from '../components/cards/RegisterCard';
+import LoginCard from '../components/cards/LoginCard';
 
 const useStyles = createUseStyles(theme => ({
+	root: {
+		height: '100%',
+		paddingTop: '50px',
+		paddingBottom: '60px'
+	},
+	container: {
+		display: 'flex',
+		flexDirection: 'column',
+		gap: '20px'
+	},
 	title: {
-		paddingTop: theme.spacing(2),
+		padding: theme.spacing(2, 0),
 		color: theme.palette.tertiary.main
 	}
 }));
@@ -13,10 +24,11 @@ const useStyles = createUseStyles(theme => ({
 function FormPage() {
 	const classes = useStyles();
 	return (
-		<div>
+		<div className={classes.root}>
 			<h1 className={classes.title}>Forms 🗒️</h1>
-			<div className="form-container">
-				<FormCard />
+			<div className={classes.container}>
+				<RegisterCard />
+				<LoginCard />
 			</div>
 		</div>
 	);

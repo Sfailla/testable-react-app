@@ -4,7 +4,7 @@ import HomePageCard from '../components/cards/HomePageCard';
 
 const useStyles = createUseStyles(theme => ({
 	root: {
-		paddingTop: theme.spacing(15),
+		paddingTop: theme.spacing(10),
 		textAlign: 'center'
 	},
 	heading: {
