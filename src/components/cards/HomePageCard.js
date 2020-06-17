@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { createUseStyles, useTheme } from 'react-jss';
+import { createUseStyles } from 'react-jss';
+import { useHistory } from 'react-router-dom';
 import image from '../../images/test-react.png';
 
 const useStyles = createUseStyles(theme => ({
@@ -9,7 +10,7 @@ const useStyles = createUseStyles(theme => ({
 		height: 'auto',
 		border: `2px solid ${theme.palette.grey[500]}`,
 		borderRadius: '16px',
-		display: 'flex',
+		display: props => (props.addClass ? 'none' : 'flex'),
 		justifyContent: 'center',
 		alignItems: 'center',
 		backgroundColor: 'darkviolet',
@@ -24,7 +25,6 @@ const useStyles = createUseStyles(theme => ({
 			boxShadow: theme.shadows[10]
 		}
 	},
-
 	button: {
 		width: '100%',
 		height: '35px',
@@ -55,9 +55,19 @@ const useStyles = createUseStyles(theme => ({
 	}
 }));
 
-const HomePageCard = () => {
-	const theme = useTheme();
-	const classes = useStyles({ theme });
+function HomePageCard() {
+	const [ addClass, setAddClass ] = React.useState(false);
+	const history = useHistory();
+	const classes = useStyles({ addClass });
+
+	const setHiddenClass = () => {
+		setAddClass(true);
+	};
+
+	const handleChangeRoute = () => {
+		history.push('/forms');
+	};
+
 	return (
 		<div className={classes.card}>
 			<div className={classes.wrapper}>
@@ -67,11 +77,21 @@ const HomePageCard = () => {
 					alt="react-image"
 					className={classes.image}
 				/>
-				<button className={classes.button}>Open Next Page</button>
-				<button className={classes.button}>close Window</button>
+				<button
+					className={classes.button}
+					onClick={handleChangeRoute}
+				>
+					Open Next Page
+				</button>
+				<button
+					onClick={() => setHiddenClass()}
+					className={classes.button}
+				>
+					close Window
+				</button>
 			</div>
 		</div>
 	);
-};
+}
 
 export default HomePageCard;
