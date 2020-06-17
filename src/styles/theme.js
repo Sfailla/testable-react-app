@@ -33,7 +33,10 @@ export const theme = {
 	palette: {
 		common: {
 			black: '#000',
-			white: '#fff'
+			white: '#fff',
+			darkPurple: '#421C52',
+			darkGrey: '#9C8AA5',
+			lightGrey: '#BDAEC6'
 		},
 		primary: {
 			light: '#7986cb',

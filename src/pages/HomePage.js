@@ -8,11 +8,11 @@ const useStyles = createUseStyles(theme => ({
 		textAlign: 'center'
 	},
 	heading: {
-		color: theme.palette.primary.dark
+		color: theme.palette.tertiary.main
 	}
 }));
 
-const HomePage = () => {
+function HomePage() {
 	const classes = useStyles();
 
 	return (
@@ -21,6 +21,6 @@ const HomePage = () => {
 			<HomePageCard />
 		</div>
 	);
-};
+}
 
 export default HomePage;

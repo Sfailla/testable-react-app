@@ -16,6 +16,8 @@ body {
 	font-family: 'Roboto', Helvetica, Arial, Sans-serif;
 	line-height: 1.5;
 	font-size: 1.6rem;
+	padding: 10px;
+	padding-top: 50px;
 
 	@media (max-width: 35em) {
 		font-size: 1.2rem;
@@ -24,4 +26,6 @@ body {
 
 button {
 	cursor: pointer;
+	border: none;
+	outline: none;
 }
