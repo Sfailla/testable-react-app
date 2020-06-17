@@ -15,14 +15,14 @@ import {
 function App() {
 	return (
 		<ThemeProvider theme={theme}>
-			<Header />
 			<Router>
+				<Header />
 				<Switch>
 					<Route exact path="/" component={HomePage} />
 					<Route exact path="/forms" component={FormPage} />
 				</Switch>
+				<Footer />
 			</Router>
-			<Footer />
 		</ThemeProvider>
 	);
 }
