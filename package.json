@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "start http://localhost:8080/ & webpack-dev-server --config ./webpack.config.dev.js",
 		"build": "webpack --config webpack.config.prod.js",
-		"test": "jest"
+		"test": "jest --watch"
 	},
 	"author": "steve failla",
 	"license": "ISC",
@@ -35,6 +35,8 @@
 		"babel-plugin-dynamic-import-node": "^2.3.0",
 		"clean-webpack-plugin": "^3.0.0",
 		"css-loader": "^3.2.0",
+		"enzyme": "^3.11.0",
+		"enzyme-adapter-react-16": "^1.15.2",
 		"file-loader": "^4.2.0",
 		"html-webpack-plugin": "^3.2.0",
 		"identity-obj-proxy": "^3.0.0",
