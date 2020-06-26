@@ -76,12 +76,12 @@ exports[`App should take a snapshot 1`] = `
       </div>
     </div>
   </div>
-  <div
+  <footer
     class="footer-0-2-14"
   >
     <p>
       created by steven failla © 2020
     </p>
-  </div>
+  </footer>
 </DocumentFragment>
 `;
