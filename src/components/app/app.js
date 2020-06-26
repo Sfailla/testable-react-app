@@ -2,8 +2,8 @@ import React from 'react';
 import { ThemeProvider } from 'react-jss';
 import { theme } from '../../styles/theme';
 
-import HomePage from '../../pages/HomePage';
-import FormPage from '../../pages/FormPage';
+import HomePage from '../../pages/homepage/HomePage';
+import FormPage from '../../pages/form/FormPage';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import {
