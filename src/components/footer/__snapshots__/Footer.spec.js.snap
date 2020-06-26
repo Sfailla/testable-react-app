@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> component unit tests should take snapshot that matches component 1`] = `
+<Footer>
+  <footer
+    className="footer-0-2-1"
+  >
+    <p>
+      created by steven failla © 2020
+    </p>
+  </footer>
+</Footer>
+`;
