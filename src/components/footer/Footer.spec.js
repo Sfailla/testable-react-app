@@ -1,6 +1,7 @@
 import React from 'react';
 import { cleanup } from '@testing-library/react';
 import { mountWithTheme } from '../../mocks/themeMock';
+import toJson from 'enzyme-to-json';
 
 import Footer from './Footer';
 
@@ -18,7 +19,8 @@ describe('<Footer /> component unit tests', () => {
 	});
 
 	it('should take snapshot that matches component', () => {
-		expect(wrapper.find(Footer)).toMatchSnapshot();
+		let tree = toJson(wrapper);
+		expect(tree).toMatchSnapshot();
 	});
 
 	it('should render footer component with 1 <footer> and 1 <p> tag', () => {
