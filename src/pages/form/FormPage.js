@@ -1,8 +1,8 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 
-import RegisterCard from '../components/cards/RegisterCard';
-import LoginCard from '../components/cards/LoginCard';
+import RegisterCard from '../../components/cards/RegisterCard';
+import LoginCard from '../../components/cards/LoginCard';
 
 const useStyles = createUseStyles(theme => ({
 	root: {
