@@ -1,5 +1,4 @@
 import React from 'react';
-import { cleanup } from '@testing-library/react';
 import { mountWithTheme } from '../../mocks/themeMock';
 import toJson from 'enzyme-to-json';
 
@@ -10,8 +9,6 @@ let wrapper;
 beforeEach(() => {
 	wrapper = mountWithTheme(<Footer />);
 });
-
-afterEach(cleanup);
 
 describe('<Footer /> component unit tests', () => {
 	it('should render 1 <Footer /> component', () => {

@@ -2,9 +2,6 @@ import React from 'react';
 import { mountWithTheme } from '../../mocks/themeMock';
 
 import { Button, ButtonGroup } from './Button';
-import { cleanup } from '@testing-library/react';
-
-afterEach(cleanup);
 
 describe('<Button /> unit tests', () => {
 	const mockFn = jest.fn();
