@@ -83,8 +83,8 @@ describe('<Button /> unit test', () => {
 	});
 
 	it('should match snapshot', () => {
-		const { asFragment } = render(<Button {...props} />);
-		expect(asFragment).toMatchSnapshot();
+		const { container } = render(<Button {...props} />);
+		expect(container).toMatchSnapshot();
 	});
 });
 
@@ -94,7 +94,7 @@ describe('<ButtonGroup /> unit tests', () => {
 	});
 
 	it('should match snapshot', () => {
-		const { asFragment } = render(<ButtonGroup />);
-		expect(asFragment).toMatchSnapshot();
+		const { container } = render(<ButtonGroup />);
+		expect(container).toMatchSnapshot();
 	});
 });

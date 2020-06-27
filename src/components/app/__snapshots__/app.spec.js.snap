@@ -4,6 +4,7 @@ exports[`App should take a snapshot 1`] = `
 <DocumentFragment>
   <header
     class="header-0-2-1"
+    data-testid="header"
   >
     <div
       class="wrapper-0-2-3"
