@@ -21,7 +21,7 @@ const useStyles = createUseStyles(theme => ({
 function Button({ text, variant, ...otherProps }) {
 	const classes = useStyles();
 	return (
-		<button className={classes[variant] || null} {...otherProps}>
+		<button className={classes[variant]} {...otherProps}>
 			{text}
 		</button>
 	);

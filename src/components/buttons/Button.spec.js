@@ -1,16 +1,18 @@
 import React from 'react';
-import { mountWithTheme } from '../../mocks/themeMock';
+import { mountWithTheme } from '../../test-utils/helpers';
+import { render, fireEvent } from '../../test-utils';
 
 import { Button, ButtonGroup } from './Button';
 
-describe('<Button /> unit tests', () => {
-	const mockFn = jest.fn();
-	const props = {
-		text: 'click me',
-		variant: 'round',
-		onClick: mockFn
-	};
+const mockFn = jest.fn();
+const props = {
+	text: 'click me',
+	variant: 'round',
+	onClick: mockFn
+};
 
+// testing with ENZYME
+describe('<Button /> unit tests', () => {
 	it('should render Button 1 time', () => {
 		const wrapper = mountWithTheme(<Button {...props} />);
 		expect(wrapper.find('Button')).toHaveLength(1);
@@ -32,11 +34,6 @@ describe('<Button /> unit tests', () => {
 		wrapper.find('Button').simulate('click');
 		expect(mockFn).toHaveBeenCalled();
 	});
-
-	it('should match snapshot', () => {
-		const wrapper = mountWithTheme(<Button {...props} />);
-		expect(wrapper).toMatchSnapshot();
-	});
 });
 
 describe('<ButtonGroup /> unit tests', () => {
@@ -53,5 +50,51 @@ describe('<ButtonGroup /> unit tests', () => {
 	it('should match snapshot', () => {
 		const wrapper = mountWithTheme(<ButtonGroup />);
 		expect(wrapper).toMatchSnapshot();
+	});
+});
+
+// Testing with TESTING LIBRARY
+describe('<Button /> unit test', () => {
+	it('should render <Button /> component without errors', () => {
+		render(<Button {...props} />);
+	});
+
+	it('Button text value should be correct', () => {
+		const { queryByText } = render(<Button {...props} />);
+		expect(queryByText('click me')).toBeTruthy();
+	});
+
+	it('text value of Button should change', () => {
+		const { queryByText, rerender } = render(<Button {...props} />);
+		expect(queryByText('click me')).toBeTruthy();
+
+		const textValue = 'go back';
+		rerender(<Button {...props} text={textValue} />);
+		expect(queryByText(textValue)).toBeTruthy();
+	});
+
+	it('should call mockFn when clicked', () => {
+		const { onClick } = props;
+		const { getByText } = render(
+			<Button {...props} onClick={onClick} />
+		);
+		fireEvent.click(getByText(props.text));
+		expect(onClick).toHaveBeenCalled();
+	});
+
+	it('should match snapshot', () => {
+		const { asFragment } = render(<Button {...props} />);
+		expect(asFragment).toMatchSnapshot();
+	});
+});
+
+describe('<ButtonGroup /> unit tests', () => {
+	it('should render <ButtonGroup /> correctly', () => {
+		render(<ButtonGroup />);
+	});
+
+	it('should match snapshot', () => {
+		const { asFragment } = render(<ButtonGroup />);
+		expect(asFragment).toMatchSnapshot();
 	});
 });
