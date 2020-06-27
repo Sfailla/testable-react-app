@@ -11,3 +11,15 @@ exports[`<Footer /> component unit tests should take snapshot that matches compo
   </footer>
 </Footer>
 `;
+
+exports[`<Footer> unit tests should take a snapshot 1`] = `
+<DocumentFragment>
+  <footer
+    class="footer-0-2-1"
+  >
+    <p>
+      created by steven failla © 2020
+    </p>
+  </footer>
+</DocumentFragment>
+`;
