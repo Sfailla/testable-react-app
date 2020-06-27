@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> unit tests should take a snapshot of component 1`] = `
+<div>
+  <header
+    class="header-0-2-1"
+    data-testid="header"
+  >
+    <div
+      class="wrapper-0-2-3"
+    >
+      <h2>
+        Logo
+      </h2>
+      <div
+        class="navigation-0-2-2"
+      >
+        <nav>
+          <ul
+            class="list-0-2-4"
+          >
+            <li
+              class="listItem-0-2-5"
+            >
+              <a
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+            <li
+              class="listItem-0-2-5"
+            >
+              <a
+                href="/forms"
+              >
+                Forms
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+</div>
+`;
