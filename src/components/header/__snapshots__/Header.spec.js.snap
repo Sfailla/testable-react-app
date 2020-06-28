@@ -16,28 +16,7 @@ exports[`<Header /> unit tests should take a snapshot of component 1`] = `
         class="navigation-0-2-2"
       >
         <nav>
-          <ul
-            class="list-0-2-4"
-          >
-            <li
-              class="listItem-0-2-5"
-            >
-              <a
-                href="/"
-              >
-                Home
-              </a>
-            </li>
-            <li
-              class="listItem-0-2-5"
-            >
-              <a
-                href="/forms"
-              >
-                Forms
-              </a>
-            </li>
-          </ul>
+          Navigation
         </nav>
       </div>
     </div>
