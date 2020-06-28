@@ -15,12 +15,15 @@ exports[`App should take a snapshot 1`] = `
       <div
         class="navigation-0-2-2"
       >
-        <nav>
+        <nav
+          data-testid="nav"
+        >
           <ul
             class="list-0-2-4"
           >
             <li
               class="listItem-0-2-5"
+              data-testid="home-link"
             >
               <a
                 href="/"
@@ -30,6 +33,7 @@ exports[`App should take a snapshot 1`] = `
             </li>
             <li
               class="listItem-0-2-5"
+              data-testid="form-link"
             >
               <a
                 href="/forms"
