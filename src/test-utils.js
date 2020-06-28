@@ -5,17 +5,39 @@ import { theme } from './styles/theme';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
 
-const renderWithRouter = children => {
-	const history = createMemoryHistory();
-	return <Router history={history}>{children}</Router>;
-};
+// const renderWithRouter = children => {
+// 	const history = createMemoryHistory();
+// 	return <Router history={history}>{children}</Router>;
+// };
 
-const AllMyProviders = ({ children }) => {
+// this is a handy function that I would utilize for any component
+// that relies on the router being in context
+function renderWithRouter(
+	ui,
+	{
+		route = '/',
+		history = createMemoryHistory({ initialEntries: [ route ] })
+	} = {}
+) {
+	return {
+		...render(
+			<ThemeProvider theme={theme}>
+				<Router history={history}>{ui}</Router>
+			</ThemeProvider>
+		),
+		// adding `history` to the returned utilities to allow us
+		// to reference it in our tests (just try to avoid using
+		// this to test implementation details).
+		history
+	};
+}
+
+const WithTheme = ({ children }) => {
 	return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
 
 const MyCustomRender = (component, options) =>
-	render(component, { wrapper: AllMyProviders, ...options });
+	render(component, { wrapper: WithTheme, ...options });
 
 // re-export everything from the `react-testing-library`
 export * from '@testing-library/react';
