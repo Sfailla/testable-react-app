@@ -2,7 +2,9 @@
 
 exports[`<Button /> unit test should match snapshot 1`] = `
 <div>
-  <button>
+  <button
+    class="undefined "
+  >
     click me
   </button>
 </div>
