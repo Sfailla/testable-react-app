@@ -25,7 +25,7 @@ function FormPage() {
 	const classes = useStyles();
 	return (
 		<div className={classes.root}>
-			<h1 className={classes.title}>Forms '🗒️'</h1>
+			<h1 className={classes.title}>Forms 🗒️</h1>
 			<div className={classes.container}>
 				<RegisterCard />
 				<LoginCard />
