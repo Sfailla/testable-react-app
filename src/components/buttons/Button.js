@@ -31,7 +31,8 @@ function Button({ text, variant, className, ...otherProps }) {
 
 Button.propTypes = {
 	text: PropTypes.string.isRequired,
-	variant: PropTypes.string,
+	type: PropTypes.string,
+	variant: PropTypes.string.isRequired,
 	onClick: PropTypes.func
 };
 
