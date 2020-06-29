@@ -1,25 +1,12 @@
 import React from 'react';
-import { Form, FormGroup, FormLabel, FormInput } from '../forms/Form';
-import { createUseStyles } from 'react-jss';
-import { Button, ButtonGroup } from '../buttons/Button';
-
-const useStyles = createUseStyles(theme => ({
-	card: {
-		width: '600px',
-		height: '400px',
-		margin: '0 auto',
-		backgroundColor: '#333',
-		borderRadius: '5px',
-		boxShadow: theme.shadows[8]
-	},
-	title: {
-		fontSize: '20px',
-		fontWeight: '500',
-		letterSpacing: '3px',
-		color: theme.palette.common.white,
-		paddingBottom: theme.spacing(1)
-	}
-}));
+import {
+	Form,
+	FormGroup,
+	FormLabel,
+	FormInput
+} from '../../forms/Form';
+import { Button, ButtonGroup } from '../../buttons/Button';
+import { useStyles } from './CardStyles';
 
 function RegisterCard() {
 	const classes = useStyles();
@@ -54,8 +41,18 @@ function RegisterCard() {
 				</FormGroup>
 
 				<ButtonGroup>
-					<Button variant="square" type="submit" text="Submit" />
-					<Button variant="square" type="button" text="Cancel" />
+					<Button
+						className={classes.button}
+						variant="square"
+						type="submit"
+						text="Submit"
+					/>
+					<Button
+						className={classes.button}
+						variant="square"
+						type="button"
+						text="Cancel"
+					/>
 				</ButtonGroup>
 			</Form>
 		</div>
