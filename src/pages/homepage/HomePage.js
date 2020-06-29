@@ -1,6 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import HomePageCard from '../../components/cards/HomePageCard';
+import HomePageCard from '../../components/cards/home-page/HomePageCard';
 
 const useStyles = createUseStyles(theme => ({
 	root: {

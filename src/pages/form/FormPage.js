@@ -1,8 +1,8 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 
-import RegisterCard from '../../components/cards/RegisterCard';
-import LoginCard from '../../components/cards/LoginCard';
+import RegisterCard from '../../components/cards/forms-page/RegisterCard';
+import LoginCard from '../../components/cards/forms-page/LoginCard';
 
 const useStyles = createUseStyles(theme => ({
 	root: {
@@ -25,7 +25,7 @@ function FormPage() {
 	const classes = useStyles();
 	return (
 		<div className={classes.root}>
-			<h1 className={classes.title}>Forms 🗒️</h1>
+			<h1 className={classes.title}>Forms '🗒️'</h1>
 			<div className={classes.container}>
 				<RegisterCard />
 				<LoginCard />
