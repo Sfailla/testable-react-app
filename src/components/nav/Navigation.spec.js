@@ -1,25 +1,51 @@
 import React from 'react';
-import { renderWithRouter } from '../../test-utils';
+import {
+	render,
+	renderWithRouter,
+	fireEvent,
+	screen
+} from '../../test-utils';
 
 import Navigation from './Navigation';
 
+jest.mock('react-router-dom', () => ({
+	Link: 'a'
+}));
+
 describe('<Navigation /> unit tests', () => {
-	it('renders <Navigation /> correctly', () => {
-		renderWithRouter(<Navigation />);
+	test('renders <Navigation /> correctly', () => {
+		render(<Navigation />);
 	});
 
-	it('Link should have same text value as component', () => {
-		const { getByTestId } = renderWithRouter(<Navigation />);
+	test('Link to /home should have correct text value', () => {
+		const { getByTestId } = render(<Navigation />);
 		const textValue = 'Home';
 		const homeLink = getByTestId('home-link');
 
 		expect(homeLink.textContent).toEqual(textValue);
 	});
-	it('Link should have same text value as component', () => {
-		const { getByTestId } = renderWithRouter(<Navigation />);
+
+	test('home link should have correct url path /', () => {
+		const { getByTestId } = render(<Navigation />);
+		expect(getByTestId('home-link').firstChild).toHaveAttribute(
+			'to',
+			'/'
+		);
+	});
+
+	test('Link to /forms should have correct text value', () => {
+		const { getByTestId } = render(<Navigation />);
 		const textValue = 'Forms';
 		const formLink = getByTestId('form-link');
 
 		expect(formLink.textContent).toEqual(textValue);
+	});
+
+	test('forms link should have correct url path /forms', () => {
+		const { getByTestId } = render(<Navigation />);
+		expect(getByTestId('form-link').firstChild).toHaveAttribute(
+			'to',
+			'/forms'
+		);
 	});
 });
