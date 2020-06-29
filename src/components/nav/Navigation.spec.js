@@ -8,14 +8,18 @@ describe('<Navigation /> unit tests', () => {
 		renderWithRouter(<Navigation />);
 	});
 
-	it('should render 2 Link elements', () => {
-		const { getByTestId, container, debug } = renderWithRouter(
-			<Navigation />
-		);
-		const nav = getByTestId('nav');
+	it('Link should have same text value as component', () => {
+		const { getByTestId } = renderWithRouter(<Navigation />);
+		const textValue = 'Home';
 		const homeLink = getByTestId('home-link');
+
+		expect(homeLink.textContent).toEqual(textValue);
+	});
+	it('Link should have same text value as component', () => {
+		const { getByTestId } = renderWithRouter(<Navigation />);
+		const textValue = 'Forms';
 		const formLink = getByTestId('form-link');
 
-		expect(nav).toBeInTheDocument();
+		expect(formLink.textContent).toEqual(textValue);
 	});
 });

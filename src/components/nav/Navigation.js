@@ -25,12 +25,12 @@ const useStyles = createUseStyles(theme => ({
 function Navigation() {
 	const classes = useStyles();
 	return (
-		<nav>
+		<nav data-testid="nav">
 			<ul className={classes.list}>
-				<li className={classes.listItem}>
+				<li data-testid="home-link" className={classes.listItem}>
 					<Link to="/">Home</Link>
 				</li>
-				<li className={classes.listItem}>
+				<li data-testid="form-link" className={classes.listItem}>
 					<Link to="/forms">Forms</Link>
 				</li>
 			</ul>
