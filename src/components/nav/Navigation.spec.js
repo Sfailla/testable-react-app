@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-	render,
-	renderWithRouter,
-	fireEvent,
-	screen
-} from '../../test-utils';
+import { render } from '../../test-utils';
 
 import Navigation from './Navigation';
 
