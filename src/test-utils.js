@@ -5,13 +5,8 @@ import { theme } from './styles/theme';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
 
-// const renderWithRouter = children => {
-// 	const history = createMemoryHistory();
-// 	return <Router history={history}>{children}</Router>;
-// };
-
 // this is a handy function that I would utilize for any component
-// that relies on the router being in context
+// that relies on the router being in context (kent dodds)
 function renderWithRouter(
 	ui,
 	{
@@ -32,12 +27,12 @@ function renderWithRouter(
 	};
 }
 
-const WithTheme = ({ children }) => {
+const ThemeProviderWrapper = ({ children }) => {
 	return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
 
 const MyCustomRender = (component, options) =>
-	render(component, { wrapper: WithTheme, ...options });
+	render(component, { wrapper: ThemeProviderWrapper, ...options });
 
 // re-export everything from the `react-testing-library`
 export * from '@testing-library/react';
