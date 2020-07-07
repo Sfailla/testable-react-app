@@ -5,8 +5,8 @@ import {
 	FormLabel,
 	FormInput
 } from '../../forms/Form';
-import { Button, ButtonGroup } from '../../buttons/Button';
 import { useStyles } from './CardStyles';
+import { Button, ButtonGroup } from '../../buttons/Button';
 
 function RegisterCard() {
 	const classes = useStyles();
