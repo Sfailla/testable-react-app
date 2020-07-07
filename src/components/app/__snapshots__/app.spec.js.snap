@@ -55,7 +55,7 @@ exports[`App should take a snapshot 1`] = `
       Welcome To Testable React!
     </h1>
     <div
-      class="card-0-2-8 card-d1-0-2-15"
+      class="card-0-2-8 card-d1-0-2-17"
     >
       <div
         class="wrapper-0-2-10"
@@ -69,12 +69,12 @@ exports[`App should take a snapshot 1`] = `
           src="[object Object]"
         />
         <button
-          class="button-0-2-9"
+          class="square-0-2-15 button-0-2-9"
         >
           Open Next Page
         </button>
         <button
-          class="button-0-2-9"
+          class="square-0-2-15 button-0-2-9"
         >
           close Window
         </button>
@@ -82,7 +82,7 @@ exports[`App should take a snapshot 1`] = `
     </div>
   </div>
   <footer
-    class="footer-0-2-14"
+    class="footer-0-2-16"
   >
     <p>
       created by steven failla © 2020
