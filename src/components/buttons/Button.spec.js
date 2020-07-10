@@ -55,6 +55,9 @@ describe('<ButtonGroup /> unit tests', () => {
 
 // Testing with TESTING LIBRARY
 describe('<Button /> unit test', () => {
+	// it is recommended to search for button using screen.getByRole query.  this is done by
+	// screen.getByRole('button', {name: /submit/i})
+
 	it('should render <Button /> component without errors', () => {
 		render(<Button {...props} />);
 	});
