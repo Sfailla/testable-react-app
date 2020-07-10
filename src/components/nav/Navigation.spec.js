@@ -17,7 +17,7 @@ describe('<Navigation /> unit tests', () => {
 		const textValue = 'Home';
 		const homeLink = getByTestId('home-link');
 
-		expect(homeLink.textContent).toEqual(textValue);
+		expect(homeLink.textContent).toBe(textValue);
 	});
 
 	test('home link should have correct url path /', () => {
@@ -33,7 +33,7 @@ describe('<Navigation /> unit tests', () => {
 		const textValue = 'Forms';
 		const formLink = getByTestId('form-link');
 
-		expect(formLink.textContent).toEqual(textValue);
+		expect(formLink.textContent).toBe(textValue);
 	});
 
 	test('forms link should have correct url path /forms', () => {
