@@ -8,6 +8,8 @@ const useStyles = createUseStyles(theme => ({
 		textAlign: 'center'
 	},
 	heading: {
+		textTransform: 'uppercase',
+		letterSpacing: '3px',
 		color: theme.palette.tertiary.main
 	}
 }));
