@@ -46,7 +46,7 @@ function FormInput({ ...otherProps }) {
 FormInput.propTypes = {
 	type: PropTypes.string,
 	type: PropTypes.oneOf([ 'text', 'password', 'number' ]),
-	name: PropTypes.string,
+	name: PropTypes.string.isRequired,
 	placeholder: PropTypes.string
 };
 
