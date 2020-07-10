@@ -15,9 +15,7 @@ exports[`App should take a snapshot 1`] = `
       <div
         class="navigation-0-2-2"
       >
-        <nav
-          data-testid="nav"
-        >
+        <nav>
           <ul
             class="list-0-2-4"
           >
