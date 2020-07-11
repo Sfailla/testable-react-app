@@ -17,7 +17,7 @@ describe('<FormGroup /> unit tests', () => {
 
 describe('<FormLabel /> unit tests', () => {
 	const props = {
-		text: 'Username',
+		text: 'username',
 		htmlFor: 'user_name'
 	};
 
@@ -25,8 +25,10 @@ describe('<FormLabel /> unit tests', () => {
 		render(<FormLabel {...props} />);
 	});
 
-	test('FormLabel should have the correct text prop value', () => {
-		const { debug, container } = render(<FormLabel {...props} />);
+	test('FormLabel should assign the correct text prop value', () => {
+		const { getByText } = render(<FormLabel {...props} />);
+		const text = 'username';
+		expect(getByText(props.text).textContent).toBe(text);
 	});
 });
 
