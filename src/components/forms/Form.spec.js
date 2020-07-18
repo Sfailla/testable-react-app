@@ -43,3 +43,24 @@ describe('<FormInput /> unit tests', () => {
 		render(<FormInput {...props} />);
 	});
 });
+
+test('should work all together', () => {
+	render(
+		<Form>
+			<FormGroup>
+				<FormLabel text="Login Form" htmlFor="login" />
+				<FormInput
+					type="text"
+					name="login"
+					placeholder="please enter login"
+				/>
+				<FormLabel text="Pasword Form" htmlFor="login" />
+				<FormInput
+					type="password"
+					name="password"
+					placeholder="please enter password"
+				/>
+			</FormGroup>
+		</Form>
+	);
+});

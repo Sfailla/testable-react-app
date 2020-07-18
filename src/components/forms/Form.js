@@ -12,7 +12,7 @@ function Form({ children, ...otherProps }) {
 }
 
 Form.propTypes = {
-	children: PropTypes.array
+	children: PropTypes.any
 };
 
 function FormGroup({ children }) {
@@ -21,7 +21,7 @@ function FormGroup({ children }) {
 }
 
 FormGroup.propTypes = {
-	children: PropTypes.array
+	children: PropTypes.any
 };
 
 function FormLabel({ text, ...otherProps }) {
