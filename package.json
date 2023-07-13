@@ -11,7 +11,7 @@
 	"author": "steve failla",
 	"license": "ISC",
 	"dependencies": {
-		"node-sass": "^4.14.1",
+		"node-sass": "^9.0.0",
 		"normalize.css": "^8.0.1",
 		"prop-types": "^15.7.2",
 		"react": "^16.10.2",
@@ -43,7 +43,7 @@
 		"html-webpack-plugin": "^3.2.0",
 		"identity-obj-proxy": "^3.0.0",
 		"image-webpack-loader": "^6.0.0",
-		"jest": "^25.1.0",
+		"jest": "^29.6.1",
 		"mini-css-extract-plugin": "^0.8.0",
 		"sass-loader": "^8.0.0",
 		"style-loader": "^1.0.0",
